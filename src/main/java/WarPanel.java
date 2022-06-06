@@ -51,7 +51,7 @@ public class WarPanel extends JFrame {
 
         this.tank = new Tank(tankGame.user.username, getRandomX(), getRandomY(), Direction.STOP, gameID);
         this.tank.setMe(true);
-
+        System.out.println("tank user id : " + tank.id);
         tankGame.client.send(MsgType.TANK_NEW, tank.Token());
 
         new Thread(new PaintThread()).start();

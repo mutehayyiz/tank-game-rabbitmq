@@ -166,6 +166,8 @@ public class HomePanel extends Panel {
 
     public void handleGameEnd(GameEnd end) {
         games.removeIf(game -> game.owner.equals(end.gameID));
+        System.out.println("Server: " +  end.winner + " wins the game " + end.gameID);
+
         printNewMessage("Server", end.winner + " wins the game " + end.gameID);
         updateGameList();
 

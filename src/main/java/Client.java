@@ -19,7 +19,6 @@ public class Client {
     String connectionID = "id";
     private String IP;
 
-
     Client(TankGame tankGame) {
         this.tankGame = tankGame;
     }
@@ -169,7 +168,6 @@ public class Client {
 
     private void onNewUser(String consumerTag, Delivery delivery) {
         User u = new User(readDelivery(delivery));
-        System.out.println("new user " + u.username);
         tankGame.homePanel.handleNewUser(u);
 
     }
